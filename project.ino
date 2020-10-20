@@ -18,7 +18,7 @@ void loop()
   cm = lecture_echo / 58; 
   Serial.print("Distance in cm : "); 
   Serial.println(cm); 
-  if(cm < 50){
+  if(cm < 100){//about 3ft
     //insert code
   }
   delay(1000); 
