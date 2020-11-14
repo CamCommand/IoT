@@ -9,3 +9,6 @@ Pin 12 (Arduino) ------> Trig
 GND (Arduino) -------> GND (Sensor)
 
 5V (Arduino) -----> VCC (Sensor)
+
+To make function the best, have the arudino set in an aple position pointed at your door or infront of your desk.
+Run the Ardunio code without opening the Serial Monitor. Then run the python code and input your game of choice (A test may be require to make sure you are shutting down the right program). Than slack off to your hearts content.
