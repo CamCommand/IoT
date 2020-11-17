@@ -15,16 +15,6 @@ def main ():
     game = game + ".exe"
     print(game)
 
-    for i in range(0, len(list)):                # runs through the list of running programs 
-        try:
-            p = psutil.Process(list[i])
-            if p.cmdline()[0].find(game) !=  -1: # checks if the user's game is running
-                 p.kill()                        # closes the game
-                 print("Ending the fun. Look busy quickly!")
-                 break;
-        except:
-            pass
-
     # myports = [tuple(p) for p in list(serial.tools.list_ports.comports())]
     arduino = serial.Serial('COM3', 9600, timeout=20)# You will have to change from where the Arduino is listening to, COM3 or COM4 or /dev/ttyS6 for Linux
     # chrome_path= "/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"
@@ -33,6 +23,16 @@ def main ():
 
 
     if (not data is None):
+
+        for i in range(0, len(list)):                # runs through the list of running programs 
+            try:
+                p = psutil.Process(list[i])
+                if p.cmdline()[0].find(game) !=  -1: # checks if the user's game is running
+                     p.kill()                        # closes the game
+                     print("Ending the fun. Look busy quickly!")
+                     break;
+            except:
+                pass
         
         #print(data.decode('utf-8'))
         #webbrowser.register('chrome', None,webbrowser.BackgroundBrowser(chrome_path),1)
