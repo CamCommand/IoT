@@ -30,6 +30,15 @@ def main ():
                 if p.cmdline()[0].find(game) !=  -1: # checks if the user's game is running
                      p.kill()                        # closes the game
                      print("Ending the fun. Look busy quickly!")
+                     keyboard.press_and_release('win + m')                 # command to close all windows in Windows
+                     keyboard.press_and_release('option + h + m')          # command to close all windows in macOS
+                     url = "https://www.arduino.cc/en/main/docs"           # to make you look busy
+                     url2 = "https://docs.python.org/3/library/index.html" # extra busy with python
+                     url3 = "https://www.arduino.cc/reference/en/"         # extra referenece
+
+                     webbrowser.open(url,new=new)
+                     webbrowser.open(url2,new=new)
+                     webbrowser.open(url3,new=new)
                      break;
             except:
                 pass
@@ -38,15 +47,7 @@ def main ():
         #webbrowser.register('chrome', None,webbrowser.BackgroundBrowser(chrome_path),1)
         #webbrowser.open_new_tab('www.google.com')
         
-        keyboard.press_and_release('win + m')                 # command to close all windows in Windows
-        keyboard.press_and_release('option + h + m')          # command to close all windows in macOS
-        url = "https://www.arduino.cc/en/main/docs"           # to make you look busy
-        url2 = "https://docs.python.org/3/library/index.html" # extra busy with python
-        url3 = "https://www.arduino.cc/reference/en/"         # extra referenece
-
-        webbrowser.open(url,new=new)
-        webbrowser.open(url2,new=new)
-        webbrowser.open(url3,new=new)
+       
         
 if __name__ == "__main__":
     main()
