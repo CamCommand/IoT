@@ -13,11 +13,11 @@ def main ():
     list = psutil.pids()
     game = input("Enter the video game you're going to play (Keep in mind capitalization and spacing): ")
     game = game + ".exe"
-    print(game)
+    # print(game)
 
     # myports = [tuple(p) for p in list(serial.tools.list_ports.comports())]
     arduino = serial.Serial('COM3', 9600, timeout=20)# You will have to change from where the Arduino is listening to, COM3 or COM4 or /dev/ttyS6 for Linux
-    # chrome_path= "/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+    # chrome_path = "/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"
     # print("port open")
     data = arduino.readline()# the last bit gets rid of the new-line chars
 
